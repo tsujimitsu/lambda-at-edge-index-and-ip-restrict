@@ -1,0 +1,20 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: >-
+  lambda at edge for change access path and restrict access ip
+
+Transform:
+  - AWS::Serverless-2016-10-31
+
+Resources:
+  lambdaHandler:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: src/handlers/lambdaHandler.lambdaHandler
+      Runtime: nodejs10.x
+      MemorySize: 128
+      Timeout: 100
+      Description: lambda at edge for change access path and restrict access ip
+      AutoPublishAlias: stg
+      Policies:
+        # Give Lambda basic execution Permission to the helloFromLambda
+        - AWSLambdaBasicExecutionRole

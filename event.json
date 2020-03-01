@@ -1,0 +1,13 @@
+{
+  "Records": [
+    {
+      "cf": {
+        "request": {
+          "uri": "https://localhost/",
+          "httpVersion": "HTTP 1.1",
+          "clientIp": "192.168.2.1"
+        }
+      }
+    }
+  ]
+}
